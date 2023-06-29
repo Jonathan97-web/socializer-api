@@ -7,7 +7,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 class MessageList(generics.ListCreateAPIView):
     """
-    List contacts or create a contact if logged in.
+    List messages or create a message if logged in.
     """
     serializer_class = MessagesSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -21,7 +21,7 @@ class MessageList(generics.ListCreateAPIView):
 
 class MessageDetail(generics.RetrieveUpdateDestroyAPIView):
     """
-    Retrieve a contact, or update or delete it by id.
+    Retrieve a message, or update or delete it by id.
     """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = MessagesDetailSerializer

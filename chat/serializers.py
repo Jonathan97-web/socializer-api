@@ -25,7 +25,7 @@ class MessagesSerializer(serializers.ModelSerializer):
 
 class MessagesDetailSerializer(MessagesSerializer):
     """
-    Serializer for the Contact model used in Detail view
+    Serializer for the Messages model used in Detail view
     profile is a read only field so that we dont have to set it on each update
     """
     profile = serializers.ReadOnlyField(source='profile.id')
