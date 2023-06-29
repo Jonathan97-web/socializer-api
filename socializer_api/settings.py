@@ -67,7 +67,8 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
-                 ]
+    '8000-jonathan97-web-socialize-i9tuoj8zz0.us2.codeanyapp.com',
+]
 
 
 # Application definition
@@ -100,6 +101,7 @@ INSTALLED_APPS = [
     'comments',
     'likes',
     'followers',
+    'chat',
 ]
 
 SITE_ID = 1
