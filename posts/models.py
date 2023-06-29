@@ -3,12 +3,12 @@ from django.contrib.auth.models import User
 
 
 POST_TOPICS = (
-    "SPORT", "SPORT",
-    "GAMING", "GAMING",
-    "FOOD", "FOOD",
-    "TRAVELING", "TRAVELING",
-    "HOME", "HOME",
-    "ACTIVITIES", "ACTIVITIES",
+    ("SPORT", "SPORT"),
+    ("GAMING", "GAMING"),
+    ("FOOD", "FOOD"),
+    ("TRAVELING", "TRAVELING"),
+    ("HOME", "HOME"),
+    ("ACTIVITIES", "ACTIVITIES"),
 )
 
 
@@ -35,7 +35,7 @@ class Post(models.Model):
         max_length=32, choices=image_filter_choices, default='normal'
     )
     topic = models.CharField(
-        max_length=30, choices=EVENT_CATEGORIES, default='Sport'
+        max_length=30, choices=POST_TOPICS, default='Sport'
     )
 
     class Meta:
