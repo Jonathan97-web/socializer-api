@@ -22,6 +22,7 @@ class PostList(generics.ListCreateAPIView):
         'owner__followed__owner__profile',
         'likes__owner__profile',
         'owner__profile',
+        'category': ['exact'],
     ]
     search_fields = [
         'owner__username',
