@@ -3,12 +3,12 @@ from django.contrib.auth.models import User
 
 
 POST_TOPICS = (
-    ("SPORT", "SPORT"),
-    ("GAMING", "GAMING"),
-    ("FOOD", "FOOD"),
-    ("TRAVELING", "TRAVELING"),
-    ("HOME", "HOME"),
-    ("ACTIVITIES", "ACTIVITIES"),
+    ("Sport", "Sport"),
+    ("Gaming", "Gaming"),
+    ("Food", "Food"),
+    ("Traveling", "Traveling"),
+    ("Home", "Home"),
+    ("Activities", "Activities"),
 )
 
 
