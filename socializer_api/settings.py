@@ -123,6 +123,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
         rf"{extracted_url}.(eu|us)\d+\.codeanyapp\.com$",
     ]
 
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'socializer_api.urls'
 
