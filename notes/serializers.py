@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Notes
 
 
-class NoteskSerializer(serializers.ModelSerializer):
+class NotesSerializer(serializers.ModelSerializer):
     """Serializer for the Notes model."""
     class Meta:
         model = Notes
