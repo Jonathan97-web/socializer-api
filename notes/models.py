@@ -10,9 +10,6 @@ class Notes(models.Model):
     title = models.TextField(max_length=50)
     notes = models.TextField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(
-        upload_to='images/', default='../default_profile_uedggu', blank=True
-    )
 
     class Meta:
         ordering = ['-created_at']
