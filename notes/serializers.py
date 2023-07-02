@@ -2,10 +2,10 @@ from rest_framework import serializers
 from .models import Notes
 
 
-class TaskSerializer(serializers.ModelSerializer):
+class NoteskSerializer(serializers.ModelSerializer):
     """Serializer for the Notes model."""
     class Meta:
-        model = Task
+        model = Notes
         fields = [
             'id',
             'created_at',
@@ -13,10 +13,10 @@ class TaskSerializer(serializers.ModelSerializer):
         ]
 
 
-class TaskDetailSerializer(serializers.ModelSerializer):
+class NotesDetailSerializer(serializers.ModelSerializer):
     """Serializer for the detailed Notes model."""
     class Meta:
-        model = Task
+        model = Notes
         fields = [
             'id',
             'created_at',
