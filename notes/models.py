@@ -15,4 +15,4 @@ class Notes(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
-        return f"{self.id}, {self.note}, {self.owner}"
+        return f"{self.id}, {self.content}, {self.owner}"
