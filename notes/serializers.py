@@ -10,6 +10,8 @@ class NotesSerializer(serializers.ModelSerializer):
             'id',
             'created_at',
             'title',
+            'notes',
+            'owner'
         ]
 
 
@@ -21,4 +23,6 @@ class NotesDetailSerializer(serializers.ModelSerializer):
             'id',
             'created_at',
             'title',
+            'notes',
+            'owner'
         ]
