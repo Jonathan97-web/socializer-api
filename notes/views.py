@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, permissions
 from .models import Notes
 from .serializers import NotesSerializer, NotesDetailSerializer
 from socializer_api.permissions import IsOwnerOrReadOnly
@@ -11,10 +11,6 @@ class NotesListView(generics.ListCreateAPIView):
     serializer_class = NotesSerializer
     permission_classes = [IsOwnerOrReadOnly]
 
-    def get_queryset(self):
-        user = self.request.user
-        return Notes.objects.filter(owner=user)
-
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
@@ -24,7 +20,3 @@ class NotesDetailedView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Notes.objects.all()
     serializer_class = NotesDetailSerializer
     permission_classes = [IsOwnerOrReadOnly]
-
-    def get_queryset(self):
-        user = self.request.user
-        return Notes.objects.filter(owner=user)
