@@ -30,7 +30,7 @@ class NotesDetailSerializer(serializers.ModelSerializer):
             'id',
             'created_at',
             'title',
-            'content,',
+            'content',
             'owner',
             'is_owner',
         ]
