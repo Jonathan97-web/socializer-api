@@ -3,18 +3,17 @@ from .models import Notes
 
 
 class NotesSerializer(serializers.ModelSerializer):
-    """Serializer for the Notes model."""
     owner = serializers.ReadOnlyField(source='owner.username')
-    is_owner = serializers.SerializerMethodField()
 
+    """Serializer for the Notes model."""
     class Meta:
         model = Notes
         fields = [
             'id',
             'created_at',
             'title',
+            'notes,'
             'owner',
-            'is_owner'
         ]
 
 
@@ -26,6 +25,6 @@ class NotesDetailSerializer(serializers.ModelSerializer):
             'id',
             'created_at',
             'title',
+            'notes,',
             'owner',
-            'is_owner'
         ]
